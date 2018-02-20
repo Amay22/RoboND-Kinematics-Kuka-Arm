@@ -89,7 +89,7 @@ DH = {   alpha0: 0,      a0: 0,      d1: 0.75,    q1: q1,
 ![alt text][image8]
 
 
-The values for a and d are in this file : [kr210.urdf.xacro](https://github/amay22/) .
+The values for a and d are in this file : [kr210.urdf.xacro](https://github.com/Amay22/RoboND-Kinematics-Kuka-Arm/blob/master/kuka_arm/urdf/kr210.urdf.xacro)
 
 
 After setting the DH parameters we can apply it on the Homogenous transforms. Each transformation matrix looks like this:
@@ -123,7 +123,7 @@ My handwriting is awful even I don't understand it myself but the code is readab
 
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
-`IK_sever.py` starts of by processing the request parameter that is passed to it. . The request contains an arm coordinates i.e. the x, y, & z positions. We use the proposed IK mentioned above to get the valid joint angles for the 6 links. The first joint angles are the arm angles and we can process them using the trigonometry working that I have hand-written above. 
+[IK_sever.py](https://github.com/Amay22/RoboND-Kinematics-Kuka-Arm/blob/master/kuka_arm/scripts/IK_server.py) starts of by processing the request parameter that is passed to it. . The request contains an arm coordinates i.e. the x, y, & z positions. We use the proposed IK mentioned above to get the valid joint angles for the 6 links. The first joint angles are the arm angles and we can process them using the trigonometry working that I have hand-written above. 
 
 θ1 angle is relative to the base frame and it's calculation is straigtforward. For θ2 and θ3 we calculate the offset  that corresponds to the rotations of links w.r.t. x axis. After that we use the cosine rule upon the the link 3 and the length of the arms itself to calculate the θ2 and θ3. All this can be found in `calculate_arm_IK()` function.
 
