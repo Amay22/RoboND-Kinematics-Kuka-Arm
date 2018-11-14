@@ -341,7 +341,7 @@ The kuka robot can sucessfully pick up 9 out of 11 pieces and drop them in the b
 - I then added the Forward kinematics debugging and realizing my mistake I got 7 out of 10 in the bin.
 - I tried again without changing the code I got 9 out of 11 pieces. It's somehow not consistent everytime I run the code.
 
-![alt text][image15]
 ![alt text][image16]
 ![alt text][image17]
+![alt text][image18]
 
